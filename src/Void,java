@@ -1,0 +1,28 @@
+public class Void implements Damagable{
+    
+    private int hp = 10000;
+    
+    public string Void{
+        // Method to get a random element
+        private String getRandomtype() {
+        List<String> type = new ArrayList<>();
+        type.add("Baron");
+        type.add("Scutttle");
+
+        Random random = new Random();
+        return elements.get(random.nextInt(elements.size()));
+    }
+    public Void(String type){
+        this.Void = getRandomVoid();
+    }
+    }
+    @Override
+    public int takedamage(int damage) {
+        hp -= damage;
+        // Check if HP is below 0, and if so, set it to 0
+        if (hp < 0) {
+            hp = 0;
+        }
+        return hp;
+    }
+}
