@@ -5,8 +5,7 @@ import java.util.Random;
 public class Dragon implements Damagable {
 
     private int hp = 10000;
-    String element;
-
+    private String element;
 
     // Method to get a random element
     private String getRandomElement() {
@@ -22,25 +21,27 @@ public class Dragon implements Damagable {
         return elements.get(random.nextInt(elements.size()));
     }
 
+    // these are all constructors
     public Dragon() {
-
+        this.element = getRandomElement();
     }
 
     public Dragon(int hp) {
         this.hp = hp;
-9
     }
 
     public Dragon(String element) {
-        this.element = getRandomElement();
+        this.element = element;
     }
 
     public Dragon(String element, int hp) {
-        this.element = getRandomElement();
+        this.element = element;
         this.hp = hp;
     }
+    // these are all constructors >
 
-    public void setHp(int hp) 
+    // getters and setters
+    public void setHp(int hp) {
         this.hp = hp;
     }
 
@@ -58,5 +59,4 @@ public class Dragon implements Damagable {
         return hp;
     }
 
-    
 }
